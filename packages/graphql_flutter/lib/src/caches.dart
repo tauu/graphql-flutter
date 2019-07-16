@@ -1,13 +1,13 @@
 import 'dart:async' show FutureOr;
 
 import 'package:meta/meta.dart';
-import 'package:path_provider/path_provider.dart'
-    show getApplicationDocumentsDirectory;
+import 'mobile_storage.dart' if (dart.library.html) 'web_storage.dart';
+// import 'package:path_provider/path_provider.dart'
+//    show getApplicationDocumentsDirectory;
 
 import 'package:graphql/client.dart' as client;
 
-final FutureOr<String> flutterStoragePrefix =
-    (() async => (await getApplicationDocumentsDirectory()).path)();
+final FutureOr<String> flutterStoragePrefix = plattformStorage.prefix(); 
 
 class InMemoryCache extends client.InMemoryCache {
   InMemoryCache({
