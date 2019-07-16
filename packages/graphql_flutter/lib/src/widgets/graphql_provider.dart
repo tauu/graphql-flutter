@@ -1,4 +1,5 @@
-import 'package:flutter/widgets.dart';
+import "package:flutter/widgets.dart"
+    if (dart.library.html) 'package:flutter_web/widgets.dart';
 
 import 'package:graphql/client.dart';
 

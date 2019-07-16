@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import "package:flutter/material.dart"
+    if (dart.library.html) 'package:flutter_web/material.dart';
 
 import 'package:graphql/client.dart';
 
