@@ -9,17 +9,18 @@ authors:
 homepage: https://github.com/zino-app/graphql-flutter/tree/master/packages/graphql_flutter
 dependencies:
   graphql: ^1.1.1-beta.8
-  flutter:
-    sdk: flutter
+  flutter_web: any
+#  flutter:
+#   sdk: flutter
   meta: ^1.1.6
   path: ^1.6.2
-  path_provider: ^1.1.0
+ # path_provider: ^1.1.0
   rxdart: ^0.22.0
 dev_dependencies:
   pedantic: <=1.7.99
   mockito: ^4.0.0
-  flutter_test:
-    sdk: flutter
+  flutter_web_test:
+ #   sdk: flutter
   test: ^1.5.3
 environment:
   sdk: '>=2.2.0 <3.0.0'
