@@ -1,7 +1,6 @@
 import 'dart:async';
 
-import "package:flutter/widgets.dart"
-    if (dart.library.html) 'package:flutter_web/widgets.dart';
+import "package:flutter_web/widgets.dart";
 
 import 'package:graphql/client.dart';
 import 'package:graphql/internal.dart';
