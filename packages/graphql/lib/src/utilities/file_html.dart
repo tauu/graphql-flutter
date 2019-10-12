@@ -8,7 +8,7 @@ Stream<List<int>> _readFile(html.File file) {
     final streamController = StreamController<List<int>>();
 
     reader.onLoad.listen((_) {
-      // streamController.add(reader.result);
+      streamController.add(reader.result);
       streamController.close();
     });
 
