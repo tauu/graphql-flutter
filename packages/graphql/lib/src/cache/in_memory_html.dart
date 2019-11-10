@@ -73,8 +73,13 @@ class InMemoryCache implements Cache {
 
   Future<HashMap<String, dynamic>> _readFromStorage() async {
     try {
-      final decoded = jsonDecode(window.localStorage[masterKey]);
-      return HashMap.from(decoded);
+      // check if a cache exists in LocalStorage
+      if (window.localStorage.containsKey(masterKey) && window.localStorage[masterKey] != null) {
+        final decoded =  jsonDecode(window.localStorage[masterKey]);
+        return HashMap.from(decoded);
+      }
+      // return an empty cache if none exists in LocalStorage
+      return HashMap<String, dynamic>();
     } catch (error) {
       // TODO: handle error
       print(error);
